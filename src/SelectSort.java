@@ -4,7 +4,7 @@
 
 public class SelectSort {
     public static void main(String[] args) {
-        int[] numbers = {8,3,100,26,589,33,21,34,6,9,1,43};
+        int[] numbers = {7,3,2,8,9,4,6,1,5};
 
         for(int i=0; i<numbers.length - 1; i++){            // 총 arr-1 만큼 반복
             int minIdx = i;
@@ -15,9 +15,10 @@ public class SelectSort {
                 }
             }
             swap(numbers, minIdx, i);
-        }
-        for(int num : numbers){
-            System.out.println(num);
+            for(int num : numbers){
+                System.out.print(num + " ");
+            }
+            System.out.println();
         }
 
     }
@@ -26,6 +27,5 @@ public class SelectSort {
         int tmp = numArr[i];
         numArr[i] = numArr[minIdx];
         numArr[minIdx] = tmp;
-
     }
 }
