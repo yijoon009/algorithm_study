@@ -1,16 +1,19 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-     Scanner in = new Scanner(System.in);
+        int N = scanner.nextInt();
 
-        int a = in.nextInt();
-        int total = 0;
-
-        for(int i=1;i<a+1;i++) {
-            total += i;
-
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= N - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
-        System.out.println(total);
-
     }
 }
